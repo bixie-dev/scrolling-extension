@@ -1,21 +1,28 @@
 * {
   box-sizing: border-box;
+  -moz-user-select: none;
 }
 
 html {
   margin: 0;
 }
 
+img {
+  pointer-events: none;
+}
+
 body {
   margin: 0;
   -moz-user-select: none;
 }
+
 img {
   pointer-events: none;
 }
+
 .header {
-  color: rgb(255, 255, 255);
   background-color: #00a884;
+  color: white;
   font-family: "Arial Narrow Bold", sans-serif;
   font-size: 20px;
   padding: 10px;
@@ -67,7 +74,7 @@ img {
 
 .input-group > label {
   justify-self: right;
-  color: #007058;
+  color: #007259;
 }
 
 .toggle-switch {
@@ -141,8 +148,9 @@ img {
 
 .input {
   border: 2px solid transparent;
-  width: 13em;
+  width: 150px;
   height: 2.5em;
+  margin: 0 10px;
   padding-left: 0.8em;
   outline: none;
   overflow: hidden;
@@ -159,9 +167,12 @@ img {
 }
 
 .footer {
-  text-align: center;
-  color: rgb(255, 255, 255);
+  width: 100%;
+  position: absolute;
+  bottom: 0;
   background-color: #00a884;
+  color: white;
   font-family: "Arial Narrow Bold", sans-serif;
-  padding: 5px;
+  font-size: 12px;
+  text-align: center;
 }
