@@ -142,24 +142,34 @@ img {
   transform: translateX(16px);
 }
 
-.input {
-  border: 2px solid transparent;
-  width: 150px;
-  height: 2.5em;
-  margin: 0 10px;
-  padding-left: 0.8em;
+.PB-range-slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 4px;
+  border-radius: 5px;
+  background: #d5dbe1;
   outline: none;
-  overflow: hidden;
-  background-color: #f3f3f3;
-  border-radius: 10px;
-  transition: all 0.5s;
+  opacity: 0.7;
+  -webkit-transition: 0.2s;
+  transition: opacity 0.2s;
 }
 
-.input:hover,
-.input:focus {
-  border: 2px solid #00a884;
-  box-shadow: 0px 0px 0px 3px rgb(74, 157, 236, 20%);
+.PB-range-slider::-moz-range-progress {
+  background-color: #00a884;
+  height: 4px;
+  border-radius: 5px;
+}
+
+.PB-range-slider::-moz-range-thumb {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
   background-color: white;
+  cursor: pointer;
+}
+.PB-range-slider::-moz-range-thumb:hover {
+  box-shadow: 0px 0px 0px 8px #00a88457;
+  transition: 0.3s ease-in-out;
 }
 
 .footer {
