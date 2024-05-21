@@ -5,6 +5,10 @@ function initSpeedInput() {
 
   speedInput.addEventListener("change", function (e) {
     localStorage.setItem("auto-scroller-speed", e.target.value);
+    browser.tabs
+      .query({ active: true, currentWindow: true })
+      .then((tabs) => sendSpeed(tabs, e.target.value))
+      .catch(reportError);
   });
 }
 
@@ -15,6 +19,11 @@ function initToggle() {
 
   toggle.addEventListener("click", function (e) {
     localStorage.setItem("auto-scroller-on", e.target.checked ? "true" : "");
+
+    browser.tabs
+      .query({ active: true, currentWindow: true })
+      .then((tabs) => sendToggleStatus(tabs, e.target.checked))
+      .catch(reportError);
   });
 }
 
@@ -23,11 +32,22 @@ function listen() {
   initToggle();
 }
 
-function reportExecuteScriptError(error) {
+function sendToggleStatus(tabs, checked) {
+  browser.tabs.sendMessage(tabs[0].id, {
+    type: "toggle",
+    payload: checked,
+  });
+}
+
+function sendSpeed(tabs, speed) {
+  browser.tabs.sendMessage(tabs[0].id, {
+    type: "speed",
+    payload: speed,
+  });
+}
+
+function reportError(error) {
   console.log("error", error);
 }
 
-browser.tabs
-  .executeScript({ file: "/main.js" })
-  .then(listen)
-  .catch(reportExecuteScriptError);
+listen();
