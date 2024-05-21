@@ -10,7 +10,7 @@ function sendMessage(tab) {
     });
 }
 
-const speedInput = document.getElementById("speed");
+const speedInput = document;
 console.log("speed input", speedInput);
 
 browser.browserAction.onClicked.addListener(sendMessage);
