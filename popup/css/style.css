@@ -1,20 +1,31 @@
 * {
   box-sizing: border-box;
+  -moz-user-select: none;
 }
 
 html {
   margin: 0;
 }
 
+img {
+  pointer-events: none;
+}
+
 body {
   margin: 0;
-  padding: 1rem;
+  -moz-user-select: none;
+}
+
+img {
+  pointer-events: none;
 }
 
 .header {
-  color: green;
+  background-color: #00a884;
+  color: white;
   font-family: "Arial Narrow Bold", sans-serif;
-  font-size: 25px;
+  font-size: 20px;
+  padding: 10px;
 }
 
 .header .header-top {
@@ -49,6 +60,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 20px 10px;
 }
 
 .input-group {
@@ -62,6 +74,7 @@ body {
 
 .input-group > label {
   justify-self: right;
+  color: #007259;
 }
 
 .toggle-switch {
@@ -82,7 +95,7 @@ body {
   left: 0;
   width: 60px;
   height: 24px;
-  background-color: #4e4e4e;
+  background-color: #797979;
   border-radius: 34px;
   cursor: pointer;
   transition: background-color 0.3s;
@@ -102,7 +115,7 @@ body {
 }
 
 .toggle-switch .toggle-input:checked + .toggle-label {
-  background-color: #007adf;
+  background-color: #00a884;
 }
 
 .toggle-switch .toggle-input:checked + .toggle-label::before {
@@ -135,8 +148,9 @@ body {
 
 .input {
   border: 2px solid transparent;
-  width: 15em;
+  width: 150px;
   height: 2.5em;
+  margin: 0 10px;
   padding-left: 0.8em;
   outline: none;
   overflow: hidden;
@@ -147,13 +161,18 @@ body {
 
 .input:hover,
 .input:focus {
-  border: 2px solid #4a9dec;
-  box-shadow: 0px 0px 0px 7px rgb(74, 157, 236, 20%);
+  border: 2px solid #00a884;
+  box-shadow: 0px 0px 0px 3px rgb(74, 157, 236, 20%);
   background-color: white;
 }
 
 .footer {
+  width: 100%;
   position: absolute;
   bottom: 0;
-  color: gray;
+  background-color: #00a884;
+  color: white;
+  font-family: "Arial Narrow Bold", sans-serif;
+  font-size: 12px;
+  text-align: center;
 }
