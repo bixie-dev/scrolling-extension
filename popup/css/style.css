@@ -6,13 +6,18 @@ html {
 body {
   margin: 0;
 }
+img {
+  pointer-events: none;
+}
 * {
   box-sizing: border-box;
+  -moz-user-select: none;
 }
 .header {
-  color: green;
+  background-color: #00a884;
+  color: white;
   font-family: "Arial Narrow Bold", sans-serif;
-  font-size: 25px;
+  font-size: 20px;
   padding: 10px;
 }
 .icon {
@@ -36,6 +41,11 @@ body {
   width: 100%;
   padding: 0 20px;
   margin-bottom: 10px;
+}
+.setting-item label {
+  width: 80px;
+  text-align: end;
+  color: #007259;
 }
 /* Genel stil */
 .toggle-switch {
@@ -80,7 +90,7 @@ body {
 
 /* Anahtarın etkin hale gelmesindeki stil değişiklikleri */
 .toggle-switch .toggle-input:checked + .toggle-label {
-  background-color: #007adf;
+  background-color: #00a884;
 }
 
 .toggle-switch .toggle-input:checked + .toggle-label::before {
@@ -115,8 +125,9 @@ body {
 
 .input {
   border: 2px solid transparent;
-  width: 15em;
+  width: 150px;
   height: 2.5em;
+  margin: 0 10px;
   padding-left: 0.8em;
   outline: none;
   overflow: hidden;
@@ -127,15 +138,20 @@ body {
 
 .input:hover,
 .input:focus {
-  border: 2px solid #4a9dec;
-  box-shadow: 0px 0px 0px 7px rgb(74, 157, 236, 20%);
+  border: 2px solid #00a884;
+  box-shadow: 0px 0px 0px 3px rgb(74, 157, 236, 20%);
   background-color: white;
 }
 
 /* --------footer----- */
 
 .footer {
+  width: 100%;
   position: absolute;
   bottom: 0;
-  color: gray;
+  background-color: #00a884;
+  color: white;
+  font-family: "Arial Narrow Bold", sans-serif;
+  font-size: 12px;
+  text-align: center;
 }
