@@ -43,11 +43,20 @@
     </div>
     <div class="main">
       <div class="input-group">
-        <label>Enable</label>
-        <div class="toggle-switch">
+        <label>Start/Stop</label>
+        <div class="checkbox-wrapper-8">
+          <input type="checkbox" id="toggle" class="tgl tgl-skewed" />
+          <label
+            for="toggle"
+            data-tg-on="Start"
+            data-tg-off="Stop"
+            class="tgl-btn"
+          ></label>
+        </div>
+        <!-- <div class="toggle-switch">
           <input class="toggle-input" id="toggle" type="checkbox" />
           <label class="toggle-label" for="toggle"></label>
-        </div>
+        </div> -->
       </div>
       <div class="input-group">
         <label for="speed">Speed</label>
